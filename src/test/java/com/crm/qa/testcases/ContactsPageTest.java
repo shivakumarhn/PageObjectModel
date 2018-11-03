@@ -6,10 +6,9 @@ import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtil;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+
+import java.io.IOException;
 
 public class ContactsPageTest extends TestBase {
 
@@ -64,7 +63,7 @@ public class ContactsPageTest extends TestBase {
     }
 
     @AfterMethod
-    public void tearDown() {
+    public void tearDown() throws IOException {
         driver.quit();
     }
 
